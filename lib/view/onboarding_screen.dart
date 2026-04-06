@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/controllers/auth_controller.dart';
 import 'package:ecommerce_app/utils/app_textstyles.dart';
-import 'package:ecommerce_app/view/widgets/signin_screen.dart';
+import 'package:ecommerce_app/view/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -38,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void _handleGetStarted() {
     final AuthController authController = Get.find<AuthController>();
     authController.setFirstTimeDone();
-    Get.off(() => const SigninScreen());
+    Get.off(() => SigninScreen());
   }
 
   @override

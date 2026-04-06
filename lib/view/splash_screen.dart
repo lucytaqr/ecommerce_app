@@ -1,7 +1,7 @@
 import 'package:ecommerce_app/controllers/auth_controller.dart';
-import 'package:ecommerce_app/view/widgets/main_screen.dart';
-import 'package:ecommerce_app/view/widgets/onboarding_screen.dart';
-import 'package:ecommerce_app/view/widgets/signin_screen.dart';
+import 'package:ecommerce_app/view/main_screen.dart';
+import 'package:ecommerce_app/view/onboarding_screen.dart';
+import 'package:ecommerce_app/view/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
       }else if(authController.isLoggedIn){
         Get.off(() => const MainScreen());
       }else {
-        Get.off(() => const SigninScreen());
+        Get.off(() => SigninScreen());
       }
     });
     return Scaffold(
